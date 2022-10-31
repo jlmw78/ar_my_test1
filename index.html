@@ -8,13 +8,33 @@
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
     <a-assets>
-        <a-asset-item id="tree" src="models/test1.gltf"></a-asset-item>
+        <a-asset-item id="test1" src="models/test1.gltf"></a-asset-item>
+	</a-assets>
+	
+    <a-assets>
+        <a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
 	</a-assets>
     
     <a-marker type="pattern" url="data/maps0.patt">
         <a-entity   position="0 0 0" 
                     rotation="0 0 0"
-                    scale="5.10 5.10 5.10"
+                    scale="1.10 1.10 1.10"
+                    gltf-model="#test1" >
+        </a-entity>
+    </a-marker>
+    
+    <a-marker type="pattern" url="data/output_1.patt">
+        <a-entity   position="0 0 0" 
+                    rotation="90 0 0"
+                    scale="0.510 0.510 0.510"
+                    gltf-model="#tree" >
+        </a-entity>
+    </a-marker>
+    
+    <a-marker type="pattern" url="data/output_2.patt">
+        <a-entity   position="0 0 0" 
+                    rotation="0 0 90"
+                    scale="0.10 0.10 0.10"
                     gltf-model="#tree" >
         </a-entity>
     </a-marker>
